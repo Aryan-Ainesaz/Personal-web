@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Wk04x_MyPortfolio.py — Source</title>
+    <style>
+      body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;background:#071827;color:#e6eef8;margin:0;padding:36px}
+      .wrap{max-width:1100px;margin:0 auto}
+      header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+      a{color:#60a5fa;text-decoration:none}
+      pre{background:#0b1220;color:#cbd5e1;padding:18px;border-radius:10px;overflow:auto;white-space:pre;line-height:1.45;font-size:13px}
+      .meta{color:#9aa6b2;margin-bottom:8px}
+      .note{color:#9aa6b2;font-size:0.95rem}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div>
+          <h1 style="margin:0">Wk04x_MyPortfolio.py</h1>
+          <div class="meta">Static source viewer — fetched from GitHub</div>
+        </div>
+        <nav>
+          <a href="index.html">← Back to portfolio</a>
+        </nav>
+      </header>
+
+      <p class="note">If the file doesn't load, the repository may be private or the raw URL changed. You can also view the file in the repository on GitHub.</p>
+
+      <pre id="code">Loading source…</pre>
+
+    </div>
+
+    <script>
+      // Fetch the raw Python source from the public GitHub repo and display it.
+      const rawUrl = 'https://raw.githubusercontent.com/Aryan-Ainesaz/Personal-web/main/Wk04x_MyPortfolio.py';
+      fetch(rawUrl).then(r => {
+        if (!r.ok) throw new Error('Network response not ok');
+        return r.text();
+      }).then(t => {
+        document.getElementById('code').textContent = t;
+      }).catch(e => {
+        document.getElementById('code').textContent = 'Failed to load source: ' + e.message;
+      });
+    </script>
+  </body>
+</html>
