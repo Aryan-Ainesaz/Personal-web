@@ -9,58 +9,92 @@
       :root{--bg:#0b1220;--card:#161a24;--muted:#9ca3af;--accent:#60a5fa}
       html,body{height:100%;margin:0}
       body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,var(--bg),#08101a);color:#e6eef8;display:flex;align-items:center;justify-content:center;padding:48px}
-      .wrap{max-width:980px;width:100%}
-      .card{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));border-radius:16px;padding:40px;box-shadow:0 10px 40px rgba(2,6,23,0.6)}
-      h1{font-size:2.2rem;margin:0 0 10px}
-      p.lead{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
-      .chips{margin:18px 0}
-      .chip{display:inline-block;background:rgba(255,255,255,0.04);color:#dbeafe;padding:8px 14px;border-radius:999px;margin-right:10px;font-size:0.95rem}
-      .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:22px}
-      .proj{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px}
-      .proj h3{margin:0 0 8px;font-size:1.02rem}
-      .proj p{margin:0;color:var(--muted);font-size:0.95rem}
-      footer{margin-top:26px;color:var(--muted);font-size:0.95rem}
-      a{color:var(--accent);text-decoration:none}
-      @media (max-width:540px){.card{padding:22px}h1{font-size:1.6rem}}
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <section class="card">
-        <header>
-          <h1>Aryan Ainesaz</h1>
-          <p class="lead">Student and developer building projects in data, simulation, and software. This is a static portfolio served by GitHub Pages.</p>
-        </header>
+      <!doctype html>
+      <html lang="en">
+        <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
+          <title>Aryan Ainesaz — Portfolio</title>
+          <meta name="description" content="Portfolio of Aryan Ainesaz" />
+          <style>
+            :root{--bg:#071024;--muted:#9aa6b2;--accent:#60a5fa;--card:#0f1724}
+            *{box-sizing:border-box}
+            body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:linear-gradient(180deg,var(--bg),#071827);color:#e6eef8}
+            header.site{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:rgba(255,255,255,0.02);backdrop-filter:blur(6px)}
+            .brand{font-weight:700;font-size:1.15rem}
+            nav a{color:var(--muted);margin-left:18px;text-decoration:none}
+            .hero{display:flex;align-items:center;gap:40px;padding:56px 48px}
+            .hero .bio{max-width:720px}
+            h1{margin:0;font-size:2.4rem}
+            p.lead{margin-top:12px;color:var(--muted);font-size:1.05rem;line-height:1.6}
+            .cta{margin-top:18px}
+            .btn{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--accent);color:#04253a;text-decoration:none;font-weight:600}
+            main.section{padding:28px 48px}
+            .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+            .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.015));padding:18px;border-radius:12px}
+            .card h3{margin:0 0 8px}
+            .card p{margin:0;color:var(--muted)}
+            footer.site{padding:22px 48px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
+            @media(max-width:720px){.hero{flex-direction:column;padding:28px}.hero img{width:160px}}
+          </style>
+        </head>
+        <body>
+          <header class="site">
+            <div class="brand">Aryan Ainesaz</div>
+            <nav>
+              <a href="#projects">Projects</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </header>
 
-        <div class="chips">
-          <span class="chip">Python</span>
-          <span class="chip">Data</span>
-          <span class="chip">Simulation</span>
-          <span class="chip">Web</span>
-        </div>
+          <section class="hero">
+            <div class="bio">
+              <h1>Hi — I’m Aryan. I build data and simulation projects.</h1>
+              <p class="lead">I’m a student and developer focusing on practical projects in Python, simulation, and web tooling. Browse some selected work below.</p>
+              <div class="cta"><a class="btn" href="#projects">View Projects</a></div>
+            </div>
+            <div class="visual" aria-hidden="true">
+              <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#123" stop-opacity="0.6"/><stop offset="1" stop-color="#045" stop-opacity="0.9"/></linearGradient></defs><rect rx="18" width="200" height="200" fill="url(#g)"/></svg>
+            </div>
+          </section>
 
-        <h2 style="margin-top:18px">Projects</h2>
-        <div class="projects">
-          <article class="proj">
-            <h3>Portfolio (this site)</h3>
-            <p>Static GitHub Pages site generated from the `docs` folder.</p>
-            <p><a href="https://github.com/Aryan-Ainesaz/Personal-web" target="_blank">View repository</a></p>
-          </article>
-          <article class="proj">
-            <h3>Wk04x_MyPortfolio.py</h3>
-            <p>Course portfolio script. <a href="https://github.com/Aryan-Ainesaz/Personal-web/blob/main/Wk04x_MyPortfolio.py" target="_blank">Source</a></p>
-          </article>
-          <article class="proj">
-            <h3>Simulation utilities</h3>
-            <p>Files for simulation and port management. <a href="https://github.com/Aryan-Ainesaz/Personal-web/tree/main" target="_blank">Browse repo</a></p>
-          </article>
-        </div>
+          <main id="projects" class="section">
+            <h2>Selected projects</h2>
+            <div class="projects">
+              <article class="card">
+                <h3>Portfolio (this site)</h3>
+                <p>Static site served from the <code>docs/</code> folder on GitHub Pages.</p>
+                <p><a href="https://github.com/Aryan-Ainesaz/Personal-web" target="_blank">Repository</a></p>
+              </article>
+              <article class="card">
+                <h3>Wk04x_MyPortfolio.py</h3>
+                <p>Course portfolio script and examples. View source in the repository.</p>
+              </article>
+              <article class="card">
+                <h3>Simulation projects</h3>
+                <p>Utilities and scripts for simulation and port management.</p>
+              </article>
+            </div>
+          </main>
 
-        <footer>
-          <p>Contact: <a href="mailto:aryan.ainesaz@bayes.city.ac.uk">aryan.ainesaz@bayes.city.ac.uk</a></p>
-          <p>More on <a href="https://github.com/Aryan-Ainesaz" target="_blank">GitHub</a></p>
-        </footer>
-      </section>
-    </div>
-  </body>
-</html>
+          <section id="about" class="section">
+            <h2>About</h2>
+            <div class="card" style="margin-top:12px">
+              <p style="color:var(--muted)">I’m exploring applied data science and simulation through course projects and personal work. I like practical code, reproducible experiments, and clear documentation.</p>
+            </div>
+          </section>
+
+          <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="card" style="margin-top:12px">
+              <p>Email: <a href="mailto:aryan.ainesaz@bayes.city.ac.uk">aryan.ainesaz@bayes.city.ac.uk</a></p>
+              <p>GitHub: <a href="https://github.com/Aryan-Ainesaz" target="_blank">@Aryan-Ainesaz</a></p>
+            </div>
+          </section>
+
+          <footer class="site">
+            © Aryan Ainesaz — static portfolio
+          </footer>
+        </body>
+      </html>
